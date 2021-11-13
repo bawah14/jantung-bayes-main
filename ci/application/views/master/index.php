@@ -28,13 +28,12 @@
                         <th>Gejala</th>
                       </tr>
                     </tfoot>
-                    <form action="konsulHandler" method="post">
                     <tbody>
                         <?php $no=0; foreach ($gejala as $key => $value) { $no++ ?>
                             <tr class="rowtb" data-value="<?php echo $no ?>">
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" name="<?php echo $value['kd_gejala']?>" id="gejala<?php echo $no ?>">
+                                    <input type="checkbox" class="custom-control-input" name="gejala[]" id="gejala<?php echo $no ?>">
                                     <label class="custom-control-label" for="gejala<?php echo $no ?>"></label>
                                     </div>
                                 </td>
@@ -43,12 +42,6 @@
                             </tr>
                         <?php } ?>
                     </tbody>
-                    <div class="form-group row">
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-primary float-right">Submit</button>
-                            </div>
-                        </div>
-                    </form>
                   </table>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 <?php 
 ob_start();
+// print_r($_POST);die();
 include "koneksi.php";
 // mengambil variabel dari halaman konsultasiFM.php
 $gejala 	= '';
